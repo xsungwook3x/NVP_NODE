@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "express": "^4.17.2"
+  },
+  "name": "nvp_node",
+  "version": "1.0.0",
+  "main": "app.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xsungwook3x/NVP_NODE.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xsungwook3x/NVP_NODE/issues"
+  },
+  "homepage": "https://github.com/xsungwook3x/NVP_NODE#readme",
+  "description": ""
+}
