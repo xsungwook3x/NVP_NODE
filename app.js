@@ -1,11 +1,22 @@
 const express=require('express');
+const path = require('path');
+const morgan = require('morgan');
+const cors = require('cors');
+const router = require('./routes');
+
 const app=express();
+const port = 3000;
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true}));
+app.use(cors());
 
 app.get("/", (req, res) => {
     res.send("Hello World");
 });
 
-app.listen(3000, () => console.log("hello"));
+app.use("/api",router);
+
+app.listen(port, () => {
+    console.log(`server is listening at http://localhost:${port}`);
+});

@@ -6,7 +6,10 @@ const authJWT = (req, res, next) => {
     const result = verify(token);
     if (result.ok) {
       req.id = result.id;
-      req.role = result.role;
+      req.name = result.name;
+      req.password=result.password;
+      req.filename=result.filename;
+      req.filedate=result.filedate;
       next();
     } else {
       res.status(401).send({
