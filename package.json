@@ -2,6 +2,8 @@
   "dependencies": {
     "@prisma/client": "^3.7.0",
     "bcrypt": "^5.0.1",
+    "coolsms-node-sdk": "^1.1.1",
+    "coolsms-sdk-v4": "^4.0.15",
     "cors": "^2.8.5",
     "express": "^4.17.2",
     "jsonwebtoken": "^8.5.1",

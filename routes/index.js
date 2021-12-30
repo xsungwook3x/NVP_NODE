@@ -1,11 +1,12 @@
 const express = require('express');
 const usersRouter = require('./users');
-
+const certificateRouter=require('./certificates');
+const smsRouter=require("./sms");
 
 const router = express.Router();
 
 router.use('/users', usersRouter);
-
-//router.post('/upload', uploadToS3.single('image'), uploadImage);
+router.use('/sms',smsRouter);
+router.use('/certificate', certificateRouter);
 
 module.exports = router;
