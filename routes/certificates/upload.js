@@ -5,7 +5,7 @@ const upload = multer({
     storage: multer.diskStorage({
       // set a localstorage destination
       destination: (req, file, cb) => {
-        cb(null, 'public/images/');
+        cb(null, '../../public/images/');
       },
       // convert a file name
       filename: (req, file, cb) => {
@@ -16,3 +16,8 @@ const upload = multer({
   });
 
 const modification
+
+module.exports = {
+    seeProfile,
+    modifyProfile,
+  };
