@@ -1,4 +1,4 @@
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
 const client = require('../../client');
 const jwt = require('../../auth/auth-jwt');
 const { redisClient } = require('../../utils/redis');
@@ -19,6 +19,9 @@ const login = async (req, res) => {
       const accessToken = jwt.sign(user);
       const refreshToken = jwt.refresh();
 
+      redisClient.on('error', (err) => console.log('Redis Client Error', err));
+
+      //await redisClient.connect();
       redisClient.set(id, refreshToken);
 
       res.status(200).send({
@@ -28,6 +31,8 @@ const login = async (req, res) => {
           refreshToken,
         },
       });
+
+      //await redisClient.disconnect();
       return;
     } else {
       res.status(401).send({

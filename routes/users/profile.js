@@ -1,5 +1,5 @@
 const client = require('../../client');
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
 const seeProfile = async (req, res) => {
   const { id } = req;
   const user = await client.users.findFirst({

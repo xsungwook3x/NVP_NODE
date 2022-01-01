@@ -1,4 +1,4 @@
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
 const client = require('../../client');
 const jwt = require('../../auth/auth-jwt');
 
