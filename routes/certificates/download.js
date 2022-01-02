@@ -3,8 +3,8 @@ const path = require('path');
 const fs = require("fs");
 
 const download = (req, res) => {
-    const fileName = req.params.name;
-    const path = __basedir + "/public/images/";
+    const fileName = req.body.filename;
+    const path = "./public/images/";
   
     res.download(path + fileName, (err) => {
       if (err) {

@@ -1,4 +1,5 @@
 const multer= require('multer');
+const fs = require('fs');
 const path = require('path');
 
 var storage = multer.diskStorage({
@@ -12,9 +13,6 @@ var storage = multer.diskStorage({
 
 const upload = multer({storage: storage});
 
-//const modification
-
 module.exports = {
     upload
-    //modifyProfile,
   };
