@@ -19,3 +19,13 @@ model Users {
   password   String     @db.VarChar(255)
   
 }
+
+model Visits {
+  id            Int         @id @default(autoincrement())
+  name          String      @db.VarChar(255)
+  phone         String      @db.VarChar(255)
+  time          String      @db.VarChar(255)
+  store_num     String      @db.VarChar(255)
+  store_name    String      @db.VarChar(255)
+  store_phone   String      @db.VarChar(255)
+}
