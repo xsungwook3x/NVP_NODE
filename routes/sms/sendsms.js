@@ -27,7 +27,7 @@ function generateRandomCode(n) {
 }
 
 const sendsms = async (req,res) => {
-    const phone = req.body.phone;
+    const phone = req.query.phone;
 
     const verifyCode =generateRandomCode(6);
 

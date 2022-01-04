@@ -29,3 +29,16 @@ model Visits {
   store_name    String      @db.VarChar(255)
   store_phone   String      @db.VarChar(255)
 }
+
+model Entreprenuers {
+  id              String      @id @db.VarChar(255)  
+  password        String      @db.VarChar(255)
+  name            String      @db.VarChar(255)
+  store_name      String      @db.VarChar(255)
+  store_num       String      @db.VarChar(255)
+  store_phone     String      @db.VarChar(255)
+  store_kind      String      @db.VarChar(255)
+  store_location  String      @db.VarChar(255)
+  store_address   String      @db.VarChar(255)
+  filename        String      @db.VarChar(255)
+}

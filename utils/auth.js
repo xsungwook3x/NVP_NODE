@@ -7,9 +7,7 @@ const authJWT = (req, res, next) => {
     if (result.ok) {
       req.id = result.id;
       req.name = result.name;
-      req.password=result.password;
       req.filename=result.filename;
-      req.filedate=result.filedate;
       next();
     } else {
       res.status(401).send({

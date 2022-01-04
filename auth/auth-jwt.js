@@ -7,10 +7,8 @@ module.exports = {
   sign: (user) => {
     const payload = {
         id: user.id,
-        password: user.password,
         name: user.name,
-        filename: user.filename,
-        filedate: user.filedate
+        filename: user.filename
     };
 
     return jwt.sign(payload, secret, {
@@ -26,10 +24,8 @@ module.exports = {
       return {
         ok: true,
         id: decoded.id,
-        password: decoded.password,
         name: decoded.name,
-        filename: decoded.filename,
-        filedate: decoded.filedate
+        filename: decoded.filename
       };
     } catch (err) {
       return {
