@@ -14,6 +14,7 @@ router.post('/upload',upload.single('image'),(req,res) => {
 router.get('/download',authJwt,download);
 
 router.put('/modification',authJwt,upload.single('image'),(req,res) => {
+    console.log(req)
     res.json(req.file)
     console.log(req.file)
 });
