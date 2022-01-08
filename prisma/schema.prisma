@@ -38,7 +38,6 @@ model Entreprenuers {
   store_num       String      @db.VarChar(255)
   store_phone     String      @db.VarChar(255)
   store_kind      String      @db.VarChar(255)
-  store_location  String      @db.VarChar(255)
   store_address   String      @db.VarChar(255)
   filename        String      @db.VarChar(255)
 }

@@ -8,9 +8,7 @@ const login = async (req, res) => {
   // to do : check id, password are not undefined
   // if undefined return 400
   const entreprenuer = await client.entreprenuers.findFirst({
-    where: {
-      id,
-    },
+    where: { id }
   });
 
   if (entreprenuer) {

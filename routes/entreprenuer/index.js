@@ -5,10 +5,13 @@ const refresh = require('./refresh');
 const { seeProfile, modifyProfile } = require('./profile');
 const {upload} = require('./upload');
 const authJwt = require('../../utils/auth');
+const checkId=require('./check');
+const remove=require('./remove');
 
 const router = express.Router();
 
 router.post('/signup', signUp);
+router.get('/check',checkId);
 router.post('/login', login);
 router.get('/profile', authJwt, seeProfile);
 router.patch('/profile', authJwt, modifyProfile);
@@ -17,5 +20,6 @@ router.post('/upload',upload.single('image'),(req,res) => {
     res.json(req.file)
     console.log(req.file)
 });
+router.delete('/',remove);
 
 module.exports = router;
