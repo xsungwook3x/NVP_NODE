@@ -11,7 +11,7 @@ const remove=require('./remove');
 const router = express.Router();
 
 router.post('/signup', signUp);
-router.get('/check',checkId);
+router.post('/check',checkId);
 router.post('/login', login);
 router.get('/profile', authJwt, seeProfile);
 router.patch('/profile', authJwt, modifyProfile);
