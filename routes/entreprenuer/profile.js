@@ -8,11 +8,12 @@ const seeProfile = async (req, res) => {
     },
   });
   if (entreprenuer) {
-    const { name, store_num,store_name,store_phone, store_kind,store_location,store_address,filename } = entreprenuer;
+    const { name,phone, store_num,store_name,store_phone, store_kind,store_location,store_address,filename } = entreprenuer;
     res.status(200).send({
       ok: true,
       data: {
         name,
+        phone,
         store_num,
         store_name,
         store_phone,

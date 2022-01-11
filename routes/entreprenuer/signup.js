@@ -3,13 +3,14 @@ const client = require('../../client');
 const jwt = require('../../auth/auth-jwt');
 
 const signup = async (req, res) => {
-  const { id, name, password, store_num,store_name,store_phone, store_kind,store_address,filename } = req.body;
+  const { id, name, password,phone,store_num,store_name,store_phone, store_kind,store_address,filename } = req.body;
   const hashedPassword = await bcrypt.hash(password, 10);
   try {
     const entreprenuer = await client.entreprenuers.create({
       data: {
         id, 
-        name, 
+        name,
+        phone, 
         store_num,
         store_name,
         store_phone, 

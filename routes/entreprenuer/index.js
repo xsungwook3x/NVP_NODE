@@ -7,6 +7,7 @@ const {upload} = require('./upload');
 const authJwt = require('../../utils/auth');
 const checkId=require('./check');
 const remove=require('./remove');
+const {findId, findPassword} = require('./find');
 
 const router = express.Router();
 
@@ -21,5 +22,8 @@ router.post('/upload',upload.single('image'),(req,res) => {
     console.log(req.file)
 });
 router.delete('/',remove);
+router.post('/find/id',findId);
+router.post('/find/password',findPassword);
+router.patch('/find/newpassword',modifyProfile);
 
 module.exports = router;
