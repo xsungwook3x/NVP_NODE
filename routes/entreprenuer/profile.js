@@ -31,8 +31,7 @@ const seeProfile = async (req, res) => {
 };
 
 const modifyProfile = async (req, res) => {
-  const { id } = req;
-  const { password } = req.body;
+  const { id, password } = req.body;
   let newPassword = null;
   if (password) {
     newPassword = await bcrypt.hash(password, 10);
