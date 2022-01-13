@@ -1,7 +1,7 @@
 const client = require('../../client');
 
 const remove = async(req,res) => {
-    const id = req.body.data.id;
+    const id = req.body.id;
 
     try {
     
