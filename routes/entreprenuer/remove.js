@@ -4,7 +4,6 @@ const remove = async(req,res) => {
     const id = req.body.id;
 
     try {
-    
         const entreprenuer = await client.entreprenuers.findUnique({ // 해당 id를 가진 article이 있는지 확인
           where: {
             id,
